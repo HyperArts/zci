@@ -13,6 +13,7 @@
 $image = intval( get_sub_field('image') );
 $size = 'full'; // (thumbnail, medium, large, full or custom size)
 $heading = get_sub_field('heading');
+$subheading = get_sub_field('subheading');
 $text = get_sub_field('text');
 $button_text = get_sub_field('button_text');
 $url = get_sub_field('url');
@@ -24,6 +25,7 @@ $button_text_4 = get_sub_field('button_text_4');
 $url_4 = get_sub_field('url_4');
 $toggle = get_sub_field('toggle');
 
+
 ?>
 
 <div class="row-container product-details <?php echo get_sub_field_object( 'product_variation' )['value'] ?> <?php if( $toggle ) echo 'lt-grey-bg' ?>">
@@ -31,6 +33,9 @@ $toggle = get_sub_field('toggle');
     <div class="clearfix max-90">
         <?php if( get_sub_field_object( 'product_variation' )['value'] == 'variation-c' ) { ?>
         <h2 class="large-32 nomarg-btm"><?php echo $heading ?></h2>
+        <?php if ($subheading) {?>
+            <h4 class="nomarg-btm"><?php echo $subheading ?></h2>
+        <?php } ?>
         <p class="large-18 nomarg-btm"><?php echo $text ?></p>
         <div class="row-divider"></div>
         <div class="clearfix wrapper">
@@ -47,7 +52,10 @@ $toggle = get_sub_field('toggle');
 
             <div class="one-half">
                 <div class="text-container">
-                    <h2 class="large-32 nomarg-btm"><?php echo $heading ?></h2>
+                    <h2 class=nomarg-btm"><?php echo $heading ?></h2>
+                     <?php if ($subheading) {?>
+                        <h4 class="nomarg-btm"><?php echo $subheading ?></h2>
+                    <?php } ?>
                     <p class="small-14"><?php echo $text ?></p>
 	                <?php if( get_sub_field_object( 'product_variation' )['value'] == 'variation-d' ) { ?>
                     <div class="row-divider"></div>
