@@ -34,7 +34,7 @@ $toggle = get_sub_field('toggle');
         <?php if( get_sub_field_object( 'product_variation' )['value'] == 'variation-c' ) { ?>
         <h2 class="large-32 nomarg-btm"><?php echo $heading ?></h2>
         <?php if ($subheading) {?>
-            <h4 class="nomarg-btm"><?php echo $subheading ?></h2>
+            <h4 class="nomarg-btm"><?php echo $subheading ?></h4>
         <?php } ?>
         <p class="large-18 nomarg-btm"><?php echo $text ?></p>
         <div class="row-divider"></div>
@@ -52,7 +52,7 @@ $toggle = get_sub_field('toggle');
 
             <div class="one-half">
                 <div class="text-container">
-                    <h2 class=nomarg-btm"><?php echo $heading ?></h2>
+                    <h2 class=large-32 nomarg-btm"><?php echo $heading ?></h2>
                      <?php if ($subheading) {?>
                         <h4 class="nomarg-btm"><?php echo $subheading ?></h2>
                     <?php } ?>

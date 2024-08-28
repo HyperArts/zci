@@ -3590,3 +3590,11 @@ a.button.block-btn.green-bg.blue {
     float: left;
     margin-right: 10px;
 }
+
+
+.entry-content h4 {
+    margin-top: -5px;
+    padding-bottom: 15px;
+    font-variant: unset;
+    font-size: 17px;
+}
