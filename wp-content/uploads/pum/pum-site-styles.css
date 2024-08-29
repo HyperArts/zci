@@ -1,6 +1,6 @@
 /**
  * Do not touch this file! This file created by the Popup Maker plugin using PHP
- * Last modified time: Aug 28 2024, 09:26:39
+ * Last modified time: Aug 28 2024, 10:42:25
  */
 
 
@@ -69,6 +69,7 @@
 
 
 
+#pum-530 {z-index: 1999999999}
 #pum-505 {z-index: 1999999999}
 #pum-484 {z-index: 1999999999}
 #pum-476 {z-index: 1999999999}

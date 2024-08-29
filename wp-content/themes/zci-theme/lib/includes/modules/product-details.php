@@ -14,6 +14,9 @@ $image = intval( get_sub_field('image') );
 $size = 'full'; // (thumbnail, medium, large, full or custom size)
 $heading = get_sub_field('heading');
 $subheading = get_sub_field('subheading');
+$button_header_1 = get_sub_field('button_header_1');
+$button_header_2 = get_sub_field('button_header_2');
+
 $text = get_sub_field('text');
 $button_text = get_sub_field('button_text');
 $url = get_sub_field('url');
@@ -64,6 +67,7 @@ $toggle = get_sub_field('toggle');
                     <?php
 
                     if( have_rows('repeater') ):
+    
 
                     while( have_rows('repeater') ) : the_row();
 
@@ -90,11 +94,52 @@ $toggle = get_sub_field('toggle');
 
                     endif; ?>
                     </ul>
-                    <?php if( $button_text ) { ?><a class="button block-btn green-bg blue" target = "_blank" href="<?php echo $url; ?>">
+                    <?php if( $button_header_1 ) { 
+
+                        $rand = rand(100000, 1000000);
+
+                        ?> 
+                    <div class = "toggle-wrap">
+                     <a class="button block-btn green-bg blue button_toggle_1_<?php echo $rand?>"><?php echo $button_header_1 ?></a>
+                       <script>
+                        jQuery( document ).ready(function() {
+                             jQuery('<?php echo ".block-$rand"?>-button-set-1').hide();
+
+
+                             jQuery('.button_toggle_1_<?php echo $rand?>').click(function(){
+                                 console.log('button 1 toggle clicked');
+                                 jQuery('.block-<?php echo $rand?>-button-set-2').hide();
+                                 jQuery('.block-<?php echo $rand?>-button-set-1').show();
+                                 jQuery('.toggle-wrap .button').attr('style', 'border: unset;');
+                                 jQuery(this).attr('style', 'border: 3px #333 solid !important;');
+                                });
+
+                        });
+                     </script>
+                    <?php }?>
+                    <?php if( $button_header_2 ) { ?> 
+                    <a class="button block-btn green-bg blue button_toggle_2_<?php echo $rand?>"><?php echo $button_header_2 ?></a><br><br>
+                     <script>
+                        jQuery( document ).ready(function() {
+                             jQuery('<?php echo ".block-$rand"?>-button-set-2').hide();
+
+                          jQuery('.button_toggle_2_<?php echo $rand?>').click(function(){
+                                 console.log('button 2 toggle clicked');
+                                 jQuery('.block-<?php echo $rand?>-button-set-1').hide();
+                                 jQuery('.block-<?php echo $rand?>-button-set-2').show();
+                                 jQuery('.toggle-wrap .button').attr('style', 'border: unset;');
+                                 jQuery(this).attr('style', 'border: 3px #333 solid !important;');
+                                });
+
+                        });
+                     </script>
+                     </div>
+                    <?php }?>
+                    <?php if( $button_text ) { ?><a class="<?php echo "block-" . $rand . "-" ?>button-set-1 button block-btn green-bg blue" target = "_blank" href="<?php echo $url; ?>">
                     <?php echo $button_text; ?></a><?php } ?>
-                    <?php if( $button_text_2 ) { ?><a class="button block-btn green-bg blue" target = "_blank" href="<?php echo $url_2; ?>"><?php echo $button_text_2; ?></a><?php } ?>
-                    <?php if( $button_text_3 ) { ?><a class="button block-btn green-bg blue" target = "_blank" id ="<?php echo $url_3; ?>"><?php echo $button_text_3; ?></a><?php } ?>
-                    <?php if( $button_text_4 ) { ?><a class="button block-btn green-bg blue" target = "_blank" id="<?php echo $url_4; ?>"><?php echo $button_text_4; ?></a><?php } ?>
+                    <?php if( $button_text_2 ) { ?><a class="<?php echo "block-" . $rand . "-" ?>button-set-1 button block-btn green-bg blue" target = "_blank" href="<?php echo $url_2; ?>"><?php echo $button_text_2; ?></a><?php } ?>
+                    <?php if( $button_text_3 ) { ?><a class="<?php echo "block-" . $rand . "-" ?>button-set-2 button block-btn green-bg blue" target = "_blank" id ="<?php echo $url_3; ?>"><?php echo $button_text_3; ?></a><?php } ?>
+                    <?php if( $button_text_4 ) { ?><a class="<?php echo "block-" . $rand . "-" ?>button-set-2 button block-btn green-bg blue" target = "_blank" id="<?php echo $url_4; ?>"><?php echo $button_text_4; ?></a><?php } ?>
 
                 </div>
             </div>

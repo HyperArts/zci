@@ -3598,3 +3598,7 @@ a.button.block-btn.green-bg.blue {
     font-variant: unset;
     font-size: 17px;
 }
+
+.toggle-wrap {
+    margin-bottom: 15px;
+}
