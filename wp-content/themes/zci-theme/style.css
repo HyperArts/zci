@@ -4,7 +4,7 @@ Description: ZCI Theme using Genesis Framework
 Author: HyperArts
 Author URI: https://hyperarts.com
 
-Version: 3.4.2
+Version: 3.5
 
 Tags: accessibility-ready, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 
@@ -3601,4 +3601,55 @@ a.button.block-btn.green-bg.blue {
 
 .toggle-wrap {
     margin-bottom: 15px;
+}
+
+.pum-title {
+    font-size: 24px !important;
+    padding-bottom: 10px;
+}
+
+
+.pum-content h3 {
+	 font-size: 20px;
+}
+
+.gca-column  {
+    font-size: 13px;
+}
+
+.gca-column a {
+    text-decoration: none !important;
+    font-size: 13px;
+    color: #015697;
+    line-height: 22px;
+}
+
+.gca-column p {
+    margin-bottom: 12px;
+}
+
+#popmake-530 li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 1px lightgray solid;
+}
+
+#popmake-530 a {
+  text-decoration: none !important;
+  font-weight: bold;
+}
+
+#popmake-530  a:after {
+    content: ">";
+    float: right;
+}
+
+#popmake-530  li:hover {
+	background-color: #015697;
+}
+
+#popmake-530  li:hover a {
+	color: white !important;
 }
