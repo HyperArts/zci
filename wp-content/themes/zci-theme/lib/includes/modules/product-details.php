@@ -19,12 +19,16 @@ $button_header_2 = get_sub_field('button_header_2');
 
 $text = get_sub_field('text');
 $button_text = get_sub_field('button_text');
+$button_id = get_sub_field('button_id');
 $url = get_sub_field('url');
 $button_text_2 = get_sub_field('button_text_2');
+$button_id_2 = get_sub_field('button_id_2');
 $url_2 = get_sub_field('url_2');
 $button_text_3 = get_sub_field('button_text_3');
+$button_id_3 = get_sub_field('button_id_3');
 $url_3 = get_sub_field('url_3');
 $button_text_4 = get_sub_field('button_text_4');
+$button_id_4 = get_sub_field('button_id_4');
 $url_4 = get_sub_field('url_4');
 $toggle = get_sub_field('toggle');
 
@@ -135,11 +139,11 @@ $toggle = get_sub_field('toggle');
                      </script>
                      </div>
                     <?php }?>
-                    <?php if( $button_text ) { ?><a class="<?php echo "block-" . $rand . "-" ?>button-set-1 button block-btn green-bg blue" target = "_blank" href="<?php echo $url; ?>">
+                    <?php if( $button_text ) { ?><a <?php if ($button_id) echo " id = '$button_id' ";?>class="<?php echo "block-" . $rand . "-" ?>button-set-1 button block-btn green-bg blue" target = "_blank" href="<?php echo $url; ?>">
                     <?php echo $button_text; ?></a><?php } ?>
-                    <?php if( $button_text_2 ) { ?><a class="<?php echo "block-" . $rand . "-" ?>button-set-1 button block-btn green-bg blue" target = "_blank" href="<?php echo $url_2; ?>"><?php echo $button_text_2; ?></a><?php } ?>
-                    <?php if( $button_text_3 ) { ?><a class="<?php echo "block-" . $rand . "-" ?>button-set-2 button block-btn green-bg blue" target = "_blank" id ="<?php echo $url_3; ?>"><?php echo $button_text_3; ?></a><?php } ?>
-                    <?php if( $button_text_4 ) { ?><a class="<?php echo "block-" . $rand . "-" ?>button-set-2 button block-btn green-bg blue" target = "_blank" id="<?php echo $url_4; ?>"><?php echo $button_text_4; ?></a><?php } ?>
+                    <?php if( $button_text_2 ) { ?><a <?php if ($button_id_2) echo " id = '$button_id_2' ";?> class="<?php echo "block-" . $rand . "-" ?>button-set-1 button block-btn green-bg blue" target = "_blank" href="<?php echo $url_2; ?>"><?php echo $button_text_2; ?></a><?php } ?>
+                    <?php if( $button_text_3 ) { ?><a <?php if ($button_id_3) echo " id = '$button_id_3' ";?> class="<?php echo "block-" . $rand . "-" ?>button-set-2 button block-btn green-bg blue" target = "_blank" href ="<?php echo $url_3; ?>"><?php echo $button_text_3; ?></a><?php } ?>
+                    <?php if( $button_text_4 ) { ?><a <?php if ($button_id_4) echo " id = '$button_id_4' ";?> class="<?php echo "block-" . $rand . "-" ?>button-set-2 button block-btn green-bg blue" target = "_blank" href="<?php echo $url_4; ?>"><?php echo $button_text_4; ?></a><?php } ?>
 
                 </div>
             </div>
