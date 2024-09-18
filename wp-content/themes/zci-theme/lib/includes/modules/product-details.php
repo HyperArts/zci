@@ -139,11 +139,13 @@ $toggle = get_sub_field('toggle');
                      </script>
                      </div>
                     <?php }?>
+                    <div class = "action-links-row-wrapper">
                     <?php if( $button_text ) { ?><a <?php if ($button_id) echo " id = '$button_id' ";?>class="<?php echo "block-" . $rand . "-" ?>button-set-1 button block-btn green-bg blue" target = "_blank" href="<?php echo $url; ?>">
                     <?php echo $button_text; ?></a><?php } ?>
                     <?php if( $button_text_2 ) { ?><a <?php if ($button_id_2) echo " id = '$button_id_2' ";?> class="<?php echo "block-" . $rand . "-" ?>button-set-1 button block-btn green-bg blue" target = "_blank" href="<?php echo $url_2; ?>"><?php echo $button_text_2; ?></a><?php } ?>
                     <?php if( $button_text_3 ) { ?><a <?php if ($button_id_3) echo " id = '$button_id_3' ";?> class="<?php echo "block-" . $rand . "-" ?>button-set-2 button block-btn green-bg blue" target = "_blank" href ="<?php echo $url_3; ?>"><?php echo $button_text_3; ?></a><?php } ?>
                     <?php if( $button_text_4 ) { ?><a <?php if ($button_id_4) echo " id = '$button_id_4' ";?> class="<?php echo "block-" . $rand . "-" ?>button-set-2 button block-btn green-bg blue" target = "_blank" href="<?php echo $url_4; ?>"><?php echo $button_text_4; ?></a><?php } ?>
+                    </div>
 
                 </div>
             </div>

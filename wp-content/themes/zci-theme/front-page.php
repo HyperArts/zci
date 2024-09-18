@@ -12,6 +12,28 @@
  * @link    https://www.studiopress.com/
  */
 
+$reset = $_GET['reset'];
+
+if (!$reset) {
+
+$cookie = $_COOKIE['landing'];
+
+}
+
+
+if ($cookie == "individual") {
+
+    header('Location: "/landing-individual/"');
+}
+
+if ($cookie == "financial") {
+    header('Location: "/landing-financial-professional/"');
+}
+
+if ($cookie == "institutional") {
+    header('Location: "/landing-institutional/"');
+}
+
 // Force full-width-content layout setting
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 

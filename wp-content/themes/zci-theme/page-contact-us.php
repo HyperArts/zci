@@ -1,8 +1,10 @@
 <?php
 /**
- * Genesis Sample.
+ * Contact Page
+ * 
+ * Template Name: Contact Page
  *
- * This file adds custom content to the Contact page.
+ * This file adds custom content to the Contact pages
  *
  * @package Genesis Sample
  * @author  StudioPress
@@ -53,7 +55,11 @@ function ha_add_contact_form() { ?>
     <p class="large-34"><?php echo get_field('heading'); ?></p>
     <p class=""><?php echo get_field('intro'); ?></p>
 
-	<?php echo do_shortcode('[gravityform id="1" title="false"]');
+    <?php $form_id = get_field('form_id'); 
+
+   $form_code = "[gravityform id='" . $form_id . "' title='false']";
+
+	 echo do_shortcode($form_code);
 }
 
 add_action('genesis_sidebar', 'ha_add_sidebar_content');
@@ -68,9 +74,7 @@ function ha_add_sidebar_content() { ?>
 	}
 	?>
 
-    <p class="address"><?php echo get_field('address'); ?></p>
-    <p class="phone">Tel <?php echo get_field('phone'); ?></p>
-    <p class="fax">Fax <?php echo get_field('fax'); ?></p>
+   <div><?php echo get_field('sales_contact'); ?></div>
 
 <?php }
 

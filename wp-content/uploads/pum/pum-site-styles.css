@@ -1,6 +1,6 @@
 /**
  * Do not touch this file! This file created by the Popup Maker plugin using PHP
- * Last modified time: Aug 30 2024, 04:00:10
+ * Last modified time: Sep 17 2024, 01:13:01
  */
 
 
@@ -74,7 +74,8 @@
  ******************************************************************************/
 .popmake-continue-link,.pum-continue-link{width:100%;line-height:2em;text-align:center;border:1px dotted;background:rgba(0,0,0,.04)}
 
-#pum-530 {z-index: 1999999999}
+#pum-530 {z-index: 10000}
+#pum-656 {z-index: 20000}
 #pum-576 {z-index: 1999999999}
 #pum-476 {z-index: 1999999999}
 #pum-558 {z-index: 199999999999}

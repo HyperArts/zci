@@ -4,7 +4,7 @@ Description: ZCI Theme using Genesis Framework
 Author: HyperArts
 Author URI: https://hyperarts.com
 
-Version: 3.5
+Version: 3.6.1
 
 Tags: accessibility-ready, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 
@@ -997,16 +997,16 @@ th {
 /* Content Sidebar Wrap
 --------------------------------------------- */
 
-body.page-id-378 .content-sidebar-wrap {
+body.page-template-page-contact-us .content-sidebar-wrap {
 	display: flex;
 	flex-direction: column;
 }
 
-body.page-id-378 main {
+body.page-template-page-contact-us main {
 	order: 1;
 }
 
-body.page-id-378 aside {
+body.page-template-page-contact-us aside {
 	order: 0;
 }
 
@@ -2007,14 +2007,14 @@ body.landing .hero {
 	overflow: hidden;
 }
 
-body.landing .hero video, body.page-id-378 .hero img {
+body.landing .hero video, body.page-template-page-contact-us .hero img {
 	width: 100%;
 	object-fit: cover;
 	min-height: 200px;
 	display: flex;
 }
 
-body.landing .hero-overlay, body.page-id-378 .hero-overlay {
+body.landing .hero-overlay, body.page-template-page-contact-us .hero-overlay {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -2024,7 +2024,7 @@ body.landing .hero-overlay, body.page-id-378 .hero-overlay {
 }
 
 @media only screen and (min-width: 480px) {
-	body.landing .hero-overlay, body.page-id-378 .hero-overlay {
+	body.landing .hero-overlay {
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -2033,9 +2033,15 @@ body.landing .hero-overlay, body.page-id-378 .hero-overlay {
 		background: linear-gradient(0deg, rgba(2, 0, 36, .2) 0%, rgba(255, 255, 255, 0) 100%);
 		height: calc( 100vh - 200px );
 	}
+
+	.page-template-page-contact-us {
+	height: calc( 70vh - 200px ) !imporant;
 }
 
-body.landing .hero .text-container, body.page-id-378 .hero .text-container {
+}
+
+
+body.landing .hero .text-container, body.page-template-page-contact-us .hero .text-container {
 	position: absolute;
 	color: #fff;
 	width: 100%;
@@ -2044,14 +2050,14 @@ body.landing .hero .text-container, body.page-id-378 .hero .text-container {
 	bottom: 0;
 }
 
-body.landing .hero .text-container p, body.page-id-378 .hero .text-container p {
+body.landing .hero .text-container p, body.page-template-page-contact-us .hero .text-container p {
 	line-height: 1;
 	max-width: 100%;
 	margin: 0 auto;
 	padding-bottom: 1.5em;
 }
 
-body.landing .hero .text-container p:after, body.page-id-378 .hero .text-container p:after {
+body.landing .hero .text-container p:after, body.page-template-page-contact-us8 .hero .text-container p:after {
 	content: '';
 	position: absolute;
 	bottom: 30px;
@@ -2077,12 +2083,12 @@ body.landing .hero > p {
 		display: flex;
 		height: calc( 100vh - 200px );
 	}
-	body.page-id-378 .hero {
+	body.page-template-page-contact-us .hero {
 		font-family: "Open Sans", sans-serif;
 		font-weight: 600;
 		position: relative;
 		display: flex;
-		height: calc( 100vh - 146px );
+		height: calc( 70vh - 146px );
 	}
 	body.landing .hero video {
 		width: 100%;
@@ -2090,13 +2096,13 @@ body.landing .hero > p {
 		height: auto;
 		height: calc( 100vh - 146px );
 	}
-	body.page-id-378 .hero img {
+	body.page-template-page-contact-us .hero img {
 		width: 100%;
 		object-fit: cover;
 		height: auto;
-		height: calc( 100vh - 146px );
+		height: calc( 70vh - 146px );
 	}
-	body.landing .hero .text-container, body.page-id-378 .hero .text-container {
+	body.landing .hero .text-container, body.page-template-page-contact-us .hero .text-container {
 		position: absolute;
 		color: #fff;
 		width: 100%;
@@ -2105,7 +2111,7 @@ body.landing .hero > p {
 		bottom: 5em;
 		padding: 0 30px;
 	}
-	body.landing .hero .text-container p, body.page-id-378 .hero .text-container p {
+	body.landing .hero .text-container p, body.page-template-page-contact-us .hero .text-container p {
 		line-height: 1;
 		margin: 0 10%;
 		padding-bottom: 1.5em;
@@ -2113,7 +2119,7 @@ body.landing .hero > p {
 }
 
 @media only screen and ( min-width: 1440px ) {
-	body.landing .hero video, body.page-id-378 .hero img {
+	body.landing .hero video, body.page-template-page-contact-us .hero img {
 		max-height: unset;
 		/*min-height: 730px;*/
 	}
@@ -2206,6 +2212,7 @@ body.landing .our-strategies {
 
 body.landing .our-strategies .row-divider {
 	height: 4em;
+	background: white;
 }
 
 @media only screen and ( max-width: 959px ) {
@@ -2326,12 +2333,14 @@ body.landing .news .text-container p::after {
 
 /* Contact Page */
 
-body.page-id-378 .eyebrow {
+body.page-template-page-contact-us.eyebrow {
 	position: relative;
 	height: 25px;
+	display: none;
 }
 
-body.page-id-378 .eyebrow::after {
+
+/*body.page-template-page-contact-us .eyebrow::after {
 	content: '';
 	position: absolute;
 	width: 0;
@@ -2344,7 +2353,7 @@ body.page-id-378 .eyebrow::after {
 }
 
 @media only screen and ( max-width: 479px ) {
-	body.page-id-378 .eyebrow::after {
+	body.page-template-page-contact-us .eyebrow::after {
 		border-top: 0px solid transparent;
 		border-left: 350px solid #d4d958;
 		border-bottom: 20px solid transparent;
@@ -2354,41 +2363,42 @@ body.page-id-378 .eyebrow::after {
 }
 
 @media only screen and ( min-width: 960px ) {
-	body.page-id-378 .eyebrow::after {
+	body.page-template-page-contact-us .eyebrow::after {
 		top: 30px;
 	}
 }
+*/
 
 @media only screen and ( min-width: 480px ) {
-	body.page-id-378 .large-34 {
+	body.page-template-page-contact-us .large-34 {
 		margin-bottom: 10px;
 	}
 }
 
 @media only screen and ( min-width: 479px ) and ( max-width: 1120px ) {
-	body.page-id-378 .large-34 {
+	body.page-template-page-contact-us .large-34 {
 		line-height: 40px;
 		margin-top: 40px;
 		margin-bottom: 20px;
 	}
 }
 
-body.page-id-378 aside .widget_block {
+body.page-template-page-contact-us aside .widget_block {
 	display: none;
 }
 
-body.page-id-378 aside {
+body.page-template-page-contact-us aside {
 	display: none;
 }
 
 @media only screen and ( min-width: 960px ) {
-	body.page-id-378 aside {
+	body.page-template-page-contact-us aside {
 		padding-top: 6em;
 		display: block;
 	}
 }
 
-body.page-id-378 aside img {
+body.page-template-page-contact-us aside img {
 	max-width: 250px;
 	margin-bottom: 1em;
 }
@@ -3174,7 +3184,7 @@ p.entry-meta {
 	/* Content-Sidebar-Wrap
 	--------------------------------------------- */
 
-	body.page-id-378 .content-sidebar-wrap {
+	body.page-template-page-contact-us .content-sidebar-wrap {
 		display: block;
 	}
 
@@ -3190,7 +3200,7 @@ p.entry-meta {
 		width: 100%;
 	}
 
-	body.page-id-378 .content {
+	body.page-template-page-contact-us .content {
 		width: 65%;
 	}
 
@@ -3569,11 +3579,38 @@ body.individual li#menu-item-523{
     display: none;
 }
 
+
+body.individual li#menu-item-632{
+    display: none;
+}
+
+
+
+body.individual li#menu-item-633{
+    display: none;
+}
+
+body.financial li#menu-item-634{
+    display: none;
+}
+
+body.financial li#menu-item-633{
+    display: none;
+}
+
 body.financial li#menu-item-418{
     display: none;
 }
 
 body.financial li#menu-item-421{
+    display: none;
+}
+
+body.institutional li#menu-item-634{
+    display: none;
+}
+
+body.institutional li#menu-item-632{
     display: none;
 }
 
@@ -3585,6 +3622,7 @@ body.institutional li#menu-item-418{
 body.institutional li#menu-item-523{
     display: none;
 }
+
 
 a.button.block-btn.green-bg.blue {
     float: left;
@@ -3652,4 +3690,107 @@ a.button.block-btn.green-bg.blue {
 
 #popmake-530  li:hover a {
 	color: white !important;
+}
+
+
+.site-footer a {
+	color: #0073e5;
+	text-decoration: underline;
+}
+
+.page-template-default .entry-content a {
+	color: #0073e5;
+	text-decoration: underline;
+}
+
+.page-template-default .entry-content a:hover {
+	color: #0073e5;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.gform_button {
+    background-color: #015697 !important;
+    color: white;
+    font-weight: bold;
+}
+
+/* News page */
+
+.page-id-646 .entry-content ul > li {
+    list-style-type: none;
+}
+
+.page-id-646 .entry-content a {
+    color: #0073e5;
+    text-decoration: none;
+}
+
+.page-id-646 .entry-content ul > li {
+    list-style-type: none;
+    border-bottom: 2px gray solid;
+    padding-bottom: 25px;
+}
+
+/* Mobile Tweaks */
+
+@media only screen and ( max-width: 480px ) {
+
+.down-arrow {
+	display: none;
+}
+
+body.landing .our-strategies .one-half.first {
+    padding-bottom: 40px;
+}
+
+.row-container.news.max-90 {
+    padding-top: 50px !important;
+}
+
+body.page-template-page-main .product-details li {
+    margin-bottom: 40px;
+}
+
+
+.page-id-646 .entry-content ul {
+    padding-left: 0px;
+}
+
+}
+
+
+.action-links-row-wrapper a.button.block-btn.green-bg.blue {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+@media only screen and ( max-width: 1180px ) {
+
+.action-links-row-wrapper a.button.block-btn.green-bg.blue {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    width: 150px;
+}
+}
+
+.blink_me {
+  animation: blinker 2.0s linear infinite;
+}
+
+img.blink_me {
+	width: 60px;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+#pt-cv-view-ff3c7ffi4v .pt-cv-title a, #pt-cv-view-ff3c7ffi4v .panel-title {
+    font-weight: 600 !important;
+    font-size: 32px;
 }

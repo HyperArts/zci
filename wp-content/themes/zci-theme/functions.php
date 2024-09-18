@@ -271,7 +271,7 @@ function be_follow_icons($menu, $args) {
 	$args = (array)$args;
 	if ( 'primary' !== $args['theme_location']  )
 		return $menu;
-	$follow = '</ul><a href="#" class="button green-bg btn-primary blue">Client Login</a>';
+	$follow = '</ul><a target = "_blank" href="https://login.bdreporting.com/Auth/Zevenbergen/SignIn" class="button green-bg btn-primary blue">Client Login</a>';
 	return $menu . $follow;
 }
 
@@ -342,11 +342,14 @@ function sp_body_class( $classes ) {
 		if(isset($_COOKIE['landing']) && $_COOKIE['landing'] === 'individual') {
 			$classes[] = 'individual';
 		}
-		if(isset($_COOKIE['landing']) && $_COOKIE['landing'] === 'financial') {
+		else if(isset($_COOKIE['landing']) && $_COOKIE['landing'] === 'financial') {
 			$classes[] = 'financial';
 		}
-		if(isset($_COOKIE['landing']) && $_COOKIE['landing'] === 'institutional') {
+		else if(isset($_COOKIE['landing']) && $_COOKIE['landing'] === 'institutional') {
 			$classes[] = 'institutional';
+		}
+		else {
+			$classes[] = 'individual';
 		}
 	}
 
@@ -359,13 +362,16 @@ add_action( 'genesis_header', 'ha_add_breadcrumbs', 1 );
 function ha_add_breadcrumbs() {
 	if( is_page() ) {
 		if(isset($_COOKIE['landing']) && $_COOKIE['landing'] === 'individual') {?>
-            <div class="breadcrumbs xx-small blue-bg upper bold"><a href="/home">Zevenbergen</a> <span class="dashicons dashicons-arrow-right-alt2 xx-small"></span> <span class="green">Individual Investors</span></div>
+            <div class="breadcrumbs xx-small blue-bg upper bold"><a href="/home/?reset=true">Zevenbergen</a> <span class="dashicons dashicons-arrow-right-alt2 xx-small"></span> <span class="green">Individual Investors</span></div>
 		<?php }
-		if(isset($_COOKIE['landing']) && $_COOKIE['landing'] === 'financial') {?>
-            <div class="breadcrumbs xx-small blue-bg upper bold"><a href="/home">Zevenbergen</a> <span class="dashicons dashicons-arrow-right-alt2 xx-small"></span> <span class="green">Financal Professionals</span></div>
+		else if(isset($_COOKIE['landing']) && $_COOKIE['landing'] === 'financial') {?>
+            <div class="breadcrumbs xx-small blue-bg upper bold"><a href="/home/?reset=true">Zevenbergen</a> <span class="dashicons dashicons-arrow-right-alt2 xx-small"></span> <span class="green">Financal Professionals</span></div>
 		<?php }
-		if(isset($_COOKIE['landing']) && $_COOKIE['landing'] === 'institutional') { ?>
-            <div class="breadcrumbs xx-small blue-bg upper bold"><a href="/home">Zevenbergen</a> <span class="dashicons dashicons-arrow-right-alt2 xx-small"></span> <span class="green">Institutional Investors</div>
+		else if(isset($_COOKIE['landing']) && $_COOKIE['landing'] === 'institutional') { ?>
+            <div class="breadcrumbs xx-small blue-bg upper bold"><a href="/home/?reset=true">Zevenbergen</a> <span class="dashicons dashicons-arrow-right-alt2 xx-small"></span> <span class="green">Institutional Investors</div>
 		<?php }
+		else {?>
+		  <div class="breadcrumbs xx-small blue-bg upper bold"><a href="/home/?reset=true">Zevenbergen</a> <span class="dashicons dashicons-arrow-right-alt2 xx-small"></span> <span class="green">Individual Investors</span></div>         
+		<?php }	
 	}
 }

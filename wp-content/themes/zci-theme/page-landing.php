@@ -69,7 +69,7 @@ function ha_hero() { ?>
 
 	</div>
 
-	<center><div style = "margin-top: -20px"><img src = "/wp-content/uploads/2024/08/noun-down-arrow-2157232-D4D958.png"></center></div>
+	<center><div class = "down-arrow" ><img class = "blink_me" src = "/wp-content/uploads/2024/08/noun-down-arrow-2157232-D4D958-smaller.png"></center></div
 
 <?php }
 
@@ -106,7 +106,7 @@ function ha_our_strategies() { ?>
     <div class="row-container our-strategies" style="background: url(<?php echo wp_get_attachment_image_url(get_field('image_strategies'), 'full') ?>) no-repeat; ">
 	    <div class="row-divider"></div>
 
-        <div class="one-half first">
+        <div class="our-strategies-inner one-half first">
             <div class="text-container">
                 <h2 class="large-30"><?php echo get_field('heading_strategies') ?></h2>
                 <p class="small-14"><?php echo get_field('text_strategies') ?></p>
@@ -159,9 +159,9 @@ function ha_news() { ?>
 		if( $the_query->have_posts() ):
 			while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-				<?php $pl = get_the_permalink(); ?>
+				<?php $pl = get_field('cv_custom_url'); ?>
 
-				<a href="<?php echo $pl?>" class="<?php echo $class[ $i % 3 ] ?>">
+				<a target = "_blank" href="<?php echo $pl?>" class="<?php echo $class[ $i % 3 ] ?>">
 
 					<?php
 					$image = get_post_thumbnail_id();
@@ -183,7 +183,7 @@ function ha_news() { ?>
 		?>
 		</div>
 		<div class="row-divider"></div>
-        <p class="center"><a href="/news-and-insights" class="base blue upper bold news-more">See more news and insights</a> <span class="dashicons dashicons-arrow-right-alt blue"></span></p>
+        <p class="center"><a href="/zvnbrgn-news-and-insights/" class="base blue upper bold news-more">See more news and insights</a> <span class="dashicons dashicons-arrow-right-alt blue"></span></p>
 	</div>
 
 	<div class="row-divider"></div>
