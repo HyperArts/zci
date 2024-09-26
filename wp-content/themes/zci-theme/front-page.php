@@ -58,6 +58,14 @@ function genesis_sample_dequeue_skip_links() {
 // Removes navigation.
 remove_theme_support( 'genesis-menus' );
 
+add_action('genesis_header_right', 'login_button');
+
+function login_button() { ?>
+
+    <a target="_blank" href="https://login.bdreporting.com/Auth/Zevenbergen/SignIn" style = "float: right; margin-right: 80px;" class="bridge-button button green-bg btn-primary blue external_link pum-trigger" style="cursor: pointer;">Client Login</a>
+
+<?php }
+
 add_action('genesis_entry_content', 'ha_add_hero');
 
 function ha_add_hero() { ?>
