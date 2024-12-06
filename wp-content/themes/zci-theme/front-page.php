@@ -12,6 +12,10 @@
  * @link    https://www.studiopress.com/
  */
 
+?>
+
+<?php
+
 $reset = $_GET['reset'];
 
 if (!$reset) {
@@ -73,11 +77,11 @@ function ha_add_hero() { ?>
         <div class="col-container">
             <p class="white bold base"><?php echo get_field('intro'); ?></p>
             <div class="text-container desktop">
-                <a href="/landing-individual/" class="" onclick="setCookie('landing','individual',365)"><div class="one-half first blue-bg large-18 semi sm-caps"><?php echo get_field('heading_one'); ?></div></a>
+                <a id = "individual-agreement"><div class="one-half first blue-bg large-18 semi sm-caps"><?php echo get_field('heading_one'); ?></div></a>
                 <div class="one-half small-12"><?php echo get_field('text_one'); ?></div>
             </div>
             <div class="text-container mobile">
-                <a href="/landing-individual/" class="" onclick="setCookie('landing','individual',365)"><div class="one-half first blue-bg large-18 semi sm-caps"><?php echo get_field('heading_one'); ?> <span class="small-14 no-sm-caps"><?php echo get_field('text_one'); ?></span></div></a>
+               <a id = "individual-agreement"><div class="one-half first blue-bg large-18 semi sm-caps"><?php echo get_field('heading_one'); ?> <span class="small-14 no-sm-caps"><?php echo get_field('text_one'); ?></span></div></a>
             </div>
             <div class="text-container desktop">
                 <a id = "professional-agreement"><div class="one-half first grey-bg large-18 semi sm-caps"><?php echo get_field('heading_two'); ?></div></a>
@@ -95,6 +99,25 @@ function ha_add_hero() { ?>
             </div>
         </div>
 	</div>
+
+    <script>
+jQuery( document ).ready(function() {
+
+jQuery('.cookie-financial').click(function(){
+   setCookie('landing','financial',365);
+   });
+
+jQuery('.cookie-individual').click(function(){
+   setCookie('landing','individual',365);
+   });
+
+jQuery('.cookie-institutional').click(function(){
+   setCookie('landing','institutional',365);
+});
+
+});
+</script>
+
 <?php }
 
 // Runs the Genesis loop.

@@ -179,6 +179,9 @@ function ha_news() { ?>
 				<?php $i++; ?>
 
 			<?php endwhile;
+
+			wp_reset_postdata();
+			
 		endif;
 		?>
 		</div>

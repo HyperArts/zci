@@ -4,7 +4,7 @@ Description: ZCI Theme using Genesis Framework
 Author: HyperArts
 Author URI: https://hyperarts.com
 
-Version: 3.6.5
+Version: 4.0
 
 Tags: accessibility-ready, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 
@@ -2550,9 +2550,16 @@ body.page-template-page-main .product-details.variation-d .one-half.first {
 	display: none;
 }
 
+
 body.page-template-page-main .product-details.variation-d .one-half:nth-of-type(2) {
 	padding: 0;
 }
+
+body.page-template-page-main .product-details.variation-f .one-half:nth-of-type(2) {
+	padding: 0;
+}
+
+
 
 @media only screen and ( min-width: 480px ) {
 	body.page-template-page-main .product-details .one-half:nth-of-type(2) {
@@ -2625,7 +2632,7 @@ body.page-template-page-main .product-details.variation-d .one-half:nth-of-type(
 
 body.page-template-page-main .product-details .one-half:nth-of-type(2) img {
 	float: left;
-	max-width: 60px;
+	max-width: 70px;
 	margin: .5em 1em 1em 0;
 }
 
@@ -2655,7 +2662,7 @@ body.page-template-page-main .product-details .text-container h2 {
 }
 
 body.page-template-page-main .product-details .text-container p {
-	line-height: 25px;
+	    line-height: 1.0rem !important;
 }
 
 body.page-template-page-main .product-details ul {
@@ -3766,6 +3773,7 @@ body.page-template-page-main .product-details li {
     float: left;
     margin-right: 10px;
     margin-bottom: 20px;
+    padding: 15px;
 }
 
 @media only screen and ( max-width: 1180px ) {
@@ -3774,7 +3782,6 @@ body.page-template-page-main .product-details li {
     float: left;
     margin-right: 10px;
     margin-bottom: 20px;
-    width: 150px;
 }
 }
 
@@ -3802,8 +3809,77 @@ img.blink_me {
   display: none;
 }
 
-
 body.landing .hero {
     margin-bottom: 30px;
+}
+}
+
+.pum-content li {
+	    list-style-type: list;
+}
+
+.before-footer.max-90 p {
+    font-size: 14px;
+    padding-right: 40px;
+    color: #333;
+}
+
+.home .before-footer.max-90 {
+    margin-top: 40px;
+}
+
+.row-container.cta.blue-bg.max-90 {
+    margin-bottom: 30px;
+}
+
+/* About the Firm */
+
+body.page-id-197 .product-details li p:nth-of-type(1) {
+    margin-bottom: 8px !important;
+}
+
+body.page-id-197 .entry-content h4 {
+    margin-top: -5px;
+    padding-bottom: 15px;
+    font-variant: unset;
+    font-size: 30px;
+}
+
+body.page-id-197 ul div {
+    margin-bottom: 10px;
+}
+
+body.page-template-page-main .product-details.variation-f .one-half.first {
+	display: none;
+}
+
+body.page-template-page-main .product-details.variation-f  .one-half {
+    width: 100%;
+}
+
+body.page-template-page-main .product-details.variation-f li {
+    width: 33%;
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media (max-width: 959px) {
+	body.page-template-page-main .product-details.variation-f li {
+    width: 100%;
+    float: unset;
+    max-height: unset;
+}
+}
+
+body.page-id-197  p.large-18.nomarg-btm {
+    max-width: 930px;
+    margin: 0 auto;
+}
+
+@media (min-width: 960px) {
+body.page-id-197  .product-details.variation-f li div:nth-of-type(2) {
+    overflow: hidden;
+    min-height: 200px;
 }
 }

@@ -365,7 +365,7 @@ function ha_add_breadcrumbs() {
             <div class="breadcrumbs xx-small blue-bg upper bold"><a href="/home/?reset=true">Zevenbergen</a> <span class="dashicons dashicons-arrow-right-alt2 xx-small"></span> <span class="green">Individual Investors</span></div>
 		<?php }
 		else if(isset($_COOKIE['landing']) && $_COOKIE['landing'] === 'financial') {?>
-            <div class="breadcrumbs xx-small blue-bg upper bold"><a href="/home/?reset=true">Zevenbergen</a> <span class="dashicons dashicons-arrow-right-alt2 xx-small"></span> <span class="green">Financal Professionals</span></div>
+            <div class="breadcrumbs xx-small blue-bg upper bold"><a href="/home/?reset=true">Zevenbergen</a> <span class="dashicons dashicons-arrow-right-alt2 xx-small"></span> <span class="green">Financial Professionals</span></div>
 		<?php }
 		else if(isset($_COOKIE['landing']) && $_COOKIE['landing'] === 'institutional') { ?>
             <div class="breadcrumbs xx-small blue-bg upper bold"><a href="/home/?reset=true">Zevenbergen</a> <span class="dashicons dashicons-arrow-right-alt2 xx-small"></span> <span class="green">Institutional Investors</div>
@@ -374,4 +374,35 @@ function ha_add_breadcrumbs() {
 		  <div class="breadcrumbs xx-small blue-bg upper bold"><a href="/home/?reset=true">Zevenbergen</a> <span class="dashicons dashicons-arrow-right-alt2 xx-small"></span> <span class="green">Individual Investors</span></div>         
 		<?php }	
 	}
+}
+
+/* Add Disclaimer Area before footer */
+
+genesis_register_sidebar( array(
+	'id'          => 'before-footer',
+	'name'        => __( 'Before Footer' ),
+) );
+
+add_action( 'genesis_before_footer', 'before_footer_widget_area', 5 );
+function before_footer_widget_area() {
+ 
+	global $post;
+
+	//print_r($post);
+
+	$post_id = $post->ID;
+
+	//echo "post id = $post_id";
+
+	$hide_disclosure = get_field('hide_fund_disclosures',$post_id);
+
+	//echo "hide = $hide_disclosure";
+
+	if (!$hide_disclosure) {
+	genesis_widget_area( 'before-footer', array(
+		'before' => '<div class="before-footer max-90"><div class="wrap">',
+		'after'  => '</div></div>',
+	) );
+	}
+ 
 }

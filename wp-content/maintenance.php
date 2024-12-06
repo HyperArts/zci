@@ -23,7 +23,7 @@ header('Retry-After: 600');
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="https://zci.hyperarts.com/wp-content/uploads/2024/09/cropped-android-chrome-512x512-1-32x32.png">
     <link rel="stylesheet" href="https://zci.hyperarts.com/wp-content/maintenance/assets/styles.css">
     <script src="https://zci.hyperarts.com/wp-content/maintenance/assets/timer.js"></script>
     <title>Scheduled Maintenance</title>
